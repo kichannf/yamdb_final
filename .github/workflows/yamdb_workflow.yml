@@ -55,7 +55,6 @@ jobs:
         with:
           push: true
           tags: kichannf/yamdb_final:v1.1
-          file: api_yamdb/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
