@@ -55,6 +55,7 @@ jobs:
         with:
           push: true
           tags: kichannf/yamdb_final:v1.1
+          file: api_yamdb/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
@@ -62,6 +63,9 @@ jobs:
     steps:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
+        run: |
+            pwd
+            ls
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
