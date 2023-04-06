@@ -1,5 +1,6 @@
 FROM python:3.7-slim
 WORKDIR /app
-COPY . /app
+COPY . .
 RUN pip3 install -r api_yamdb/requirements.txt --no-cache-dir
-CMD ["gunicorn", "yatube.wsgi:application", "--bind", "0.0.0.0:8000" ] 
+WORKDIR /app/api_yamdb
+CMD ["gunicorn", "api_yamdb:application", "--bind", "0.0.0.0:8000" ] 
