@@ -10,7 +10,7 @@ services:
       - ./.env
 
   web:
-    image: kichannf/yamdb_final:latest
+    image: kichannf/yamdb_final:v1.1
     restart: always
     volumes:
       - static_value:/app/static/
