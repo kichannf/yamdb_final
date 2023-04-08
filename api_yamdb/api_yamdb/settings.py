@@ -18,7 +18,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '84.201.165.225',
-    '*'
+    'localhost',
+    '127.0.0.1',
+    '*',
 ]
 
 
@@ -190,4 +192,3 @@ ROLE_CHOICES = (
 DATETIME_INPUT_FORMATS = [
     '%Y-%m-%dT%H:%M:%S.%fZ',
 ]
-
