@@ -10,7 +10,7 @@ WORKDIR /app
 COPY . .
 # RUN pwd
 # RUN ls
-RUN pip3 install -r api_yamdb/requirements.txt --no-cache-dir
+RUN pip3 install -r requirements.txt --no-cache-dir
 # RUN pwd
 # RUN ls
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0.0.0.0:8000" ] 
